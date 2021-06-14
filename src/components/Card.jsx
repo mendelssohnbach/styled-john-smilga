@@ -32,11 +32,23 @@ const StyledCard = styled.article`
     padding: 0 2rem;
     h4 {
       text-transform: capitalize;
+      &::before {
+        content: 'Name: ';
+        color: red;
+      }
     }
     p {
       color: ver(--primary);
       font-weight: 700;
     }
+  }
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    box-shadow: 0 3px 3px #222;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 600px;
   }
 `;
 

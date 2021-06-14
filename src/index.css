@@ -10,6 +10,9 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
+.section-title {
+  color: red;
+}
 
 .btn {
   background: #645cff;

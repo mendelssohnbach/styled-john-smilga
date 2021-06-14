@@ -3,6 +3,9 @@ function App() {
     <div style={{ padding: '2rem' }}>
       <h1 className="title">styled components</h1>
       <button className="btn">click me</button>
+      <div style={{ padding: '2rem' }}>
+        <h2 className="section-title">hello world</h2>
+      </div>
     </div>
   );
 }

@@ -1,11 +1,18 @@
+import styled from 'styled-components';
+
+const BasicTitle = styled.h1`
+  text-align: center;
+  text-transform: capitalize;
+`;
+
 function App() {
   return (
     <div style={{ padding: '2rem' }}>
-      <h1 className="title">styled components</h1>
+      <BasicTitle>styled components</BasicTitle>
+      <BasicTitle>styled components</BasicTitle>
+      <BasicTitle>styled components</BasicTitle>
+      <BasicTitle>styled components</BasicTitle>
       <button className="btn">click me</button>
-      <div style={{ padding: '2rem' }}>
-        <h2 className="section-title">hello world</h2>
-      </div>
     </div>
   );
 }

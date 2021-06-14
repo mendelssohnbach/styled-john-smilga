@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../utils';
 
 const ComplexTitle = ({ title, className }) => {
   return (
@@ -17,7 +18,7 @@ const Wrapper = styled(ComplexTitle)`
   .underline {
     width: 5rem;
     height: 0.25rem;
-    background: #645cff;
+    background: ${colors.primary};
     margin: 0 auto;
   }
 `;

@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 export const DefaultButton = styled.button`
   background: #645cff;
@@ -9,8 +9,22 @@ export const DefaultButton = styled.button`
   text-transform: capitalize;
   padding: 0.25rem;
   display: block;
-  width: 200px;
   margin: 1rem auto;
+  ${({ large }) =>
+    large
+      ? css`
+          padding: 1rem;
+          font-size: 1.5rem;
+          font-weight: 700;
+        `
+      : css`
+          padding: 0.5rem;
+          font-size: 1rem;
+          font-weight: 400;
+        `}
+  padding: ${({ large }) => large && '2rem'};
+  width: 200px;
+  font-weight: 400;
 `;
 
 export const HipsterButton = styled(DefaultButton)`

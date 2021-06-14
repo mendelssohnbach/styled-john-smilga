@@ -1,13 +1,12 @@
-import styled from 'styled-components';
-
-const StyledBtn = styled(Button)`
-  text-transform: capitalize;
-`;
+// import styled from 'styled-components';
+import ComplexTitle from './components/ComplexTitle';
+import Random from './components/Random';
 
 function App() {
   return (
     <div style={{ padding: '2rem' }}>
-      <h2>more complex title</h2>
+      <ComplexTitle title="more complex title" />
+      <Random />
     </div>
   );
 }

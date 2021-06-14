@@ -1,6 +1,6 @@
 // import styled from 'styled-components';
 import BasicTitle from './components/BasicTitle';
-import { DefaultButton } from './components/Buttons';
+import { DefaultButton, HipsterButton } from './components/Buttons';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <BasicTitle special>styled components</BasicTitle>
       <BasicTitle>styled components</BasicTitle>
       <DefaultButton className="btn">click me</DefaultButton>
+      <HipsterButton className="btn">click me</HipsterButton>
     </div>
   );
 }

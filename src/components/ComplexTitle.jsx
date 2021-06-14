@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
-const ComplexTitle = (props) => {
-  console.log(props);
+const ComplexTitle = ({ title }) => {
   return (
-    <div>
-      <h1>{props.title}</h1>
+    <Wrapper>
+      <h1>{title}</h1>
       <div className="underline"></div>
-    </div>
+    </Wrapper>
   );
 };
 
-const Wrapper = styled(ComplexTitle)`
+const Wrapper = styled.div`
   h1 {
     text-transform: capitalize;
     text-align: center;
@@ -23,4 +22,4 @@ const Wrapper = styled(ComplexTitle)`
   }
 `;
 
-export default Wrapper;
+export default ComplexTitle;

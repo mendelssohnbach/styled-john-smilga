@@ -1,10 +1,20 @@
 import styled, { css } from 'styled-components/macro';
 
+const Button = styled.button.attrs((props) => {
+  return { type: props.type || 'button' };
+})`
+  background: var(--primary);
+  border: none;
+  color: white;
+  padding: 0.25rem;
+  cursor: pointer;
+`;
+
 const Form = () => {
   return (
     <div>
       <h1>some random stuff</h1>
-      <button>click me</button>
+      <Button type="button">click me</Button>
       <form
         css={`
           width: 300px;
@@ -15,7 +25,7 @@ const Form = () => {
       >
         <h2>Form</h2>
         <input type="text" />
-        <button>submit here</button>
+        <Button>submit here</Button>
       </form>
     </div>
   );

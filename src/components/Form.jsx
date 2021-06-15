@@ -8,6 +8,17 @@ const Button = styled.button.attrs((props) => {
   color: white;
   padding: 0.25rem;
   cursor: pointer;
+  ${({ type }) => {
+    return (
+      type === 'submit' &&
+      css`
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        border-radius: 0.25rem;
+      `
+    );
+  }}
 `;
 
 const Form = () => {
@@ -25,7 +36,7 @@ const Form = () => {
       >
         <h2>Form</h2>
         <input type="text" />
-        <Button>submit here</Button>
+        <Button type="submit">submit here</Button>
       </form>
     </div>
   );

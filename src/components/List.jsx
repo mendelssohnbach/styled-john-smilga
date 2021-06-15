@@ -2,11 +2,32 @@ import styled, { css } from 'styled-components/macro';
 
 const fruits = ['orange', 'apple', 'banana', 'peach'];
 
+const Item = styled.li`
+  list-style-type: none;
+  ${({ odd }) => {
+    return odd
+      ? css`
+          color: with;
+          background: red;
+          font-size: 1.5rem;
+          padding: 1.5rem;
+        `
+      : css`
+          color: 222;
+          padding: 1rem;
+        `;
+  }}
+`;
+
 const List = () => {
   return (
     <ul>
       {fruits.map((item, index) => {
-        return <li key={index}>{item}</li>;
+        return (
+          <Item key={index} odd={(index + 1) % 2 !== 0}>
+            {item}
+          </Item>
+        );
       })}
     </ul>
   );
